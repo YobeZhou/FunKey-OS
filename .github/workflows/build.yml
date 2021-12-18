@@ -27,7 +27,10 @@ jobs:
     - name: Build SDK
       run: make sdk
     - name: Build FunKey-OS
-      run: make
+      run: |
+        make
+        ls images
+        cat br.log
     - uses: actions/upload-artifact@v2
       with:
         name: Upload artifacts
